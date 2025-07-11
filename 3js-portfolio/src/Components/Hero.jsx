@@ -12,6 +12,7 @@ import ReactLogo from "./ReactLogo";
 import Cube from "./Cube";
 import Rings from "./Rings";
 import HeroCamera from "./HeroCamera";
+import Button from "./Button";
 
 const Hero = () => {
   // const controls = useControls("HackerRoom", {
@@ -70,6 +71,17 @@ const Hero = () => {
             <directionalLight position={[10, 10, 10]} intensity={0.5} />
           </Suspense>
         </Canvas>
+      </div>
+
+      <div className="absolute bottom-7 left-0 right-0 w-full z-10 sm:px-10 px-5">
+        <a href="#about" className="w-fit">
+          {/* Button */}
+          <Button
+            name="Let's work together"
+            isBeam
+            containerClass="sm:w-fit w-full sm:min-w-96"
+          />
+        </a>
       </div>
     </section>
   );

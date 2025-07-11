@@ -9,7 +9,7 @@ const NavItems = () => {
         return (
           <li
             key={id}
-            className="text-neutral-400 hover:text-white font-sans max-sm:hover:bg-black-500 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5"
+            className="text-neutral-400 hover:text-white font-sans max-sm:hover:bg-[#3A3A49] max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5"
           >
             <a
               href={href}
@@ -62,7 +62,7 @@ const Navbar = () => {
       </div>
 
       <div
-        className={`absolute left-0 right-0 bg-black-200 backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block ${
+        className={`absolute left-0 right-0 bg-[#0E0E10]  backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block ${
           isOpen ? "max-h-screen" : "max-h-0"
         }`}
       >
