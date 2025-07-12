@@ -8,11 +8,11 @@ const Footer = () => {
       </div>
 
       <div className="flex gap-3">
-        <div className="w-12 h-12 rounded-full flex justify-center items-center bg-black-300 border border-black-200">
+        <div className="w-12 h-12 rounded-full flex justify-center items-center bg-[#1C1C21] border border-black-200">
           <img src="/assets/github.svg" alt="github" className="w-1/2 h-1/2" />
         </div>
 
-        <div className="w-12 h-12 rounded-full flex justify-center items-center bg-black-300 border border-black-200">
+        <div className="w-12 h-12 rounded-full flex justify-center items-center bg-[#1C1C21] border border-black-200">
           <img
             src="/assets/twitter.svg"
             alt="twitter"
@@ -20,7 +20,7 @@ const Footer = () => {
           />
         </div>
 
-        <div className="w-12 h-12 rounded-full flex justify-center items-center bg-black-300 border border-black-200">
+        <div className="w-12 h-12 rounded-full flex justify-center items-center bg-[#1C1C21] border border-black-200">
           <img
             src="/assets/instagram.svg"
             alt="instagram"
