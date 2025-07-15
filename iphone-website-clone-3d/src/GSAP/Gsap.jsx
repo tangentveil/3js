@@ -99,12 +99,57 @@ const Gsap = () => {
   //   });
   // }, []);
 
-  const scrollRef = useRef();
+  // const scrollRef = useRef();
 
-  useGSAP(() => {}, []);
+  // useGSAP(
+  //   () => {
+  //     const boxes = gsap.utils.toArray(scrollRef.current.children);
+
+  //     boxes.forEach((box) => {
+  //       gsap.to(box, {
+  //         x: 150 * (boxes.indexOf(box) + 1),
+  //         rotation: 360,
+  //         borderRadius: "100%",
+  //         scale: 1.5,
+  //         scrollTrigger: {
+  //           trigger: box,
+  //           start: "bottom bottom",
+  //           end: "top 20%",
+  //           scrub: true,
+  //         },
+  //         ease: "power1.inOut",
+  //       });
+  //     });
+  //   },
+  //   { scrollRef }
+  // );
+
+  useGSAP(() => {
+    gsap.to("#text", {
+      ease: "power1,inOut",
+      opacity: 1,
+      y: 0,
+      // delay: 1,
+      // repeat: -1,
+    });
+
+    gsap.fromTo(
+      ".para",
+      {
+        opacity: 0,
+        y: 20,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        delay: 1,
+        stagger: 0.1,
+      }
+    );
+  }, []);
 
   return (
-    <>
+    <div className="h-screen">
       {/* <button
         className="m-10 cursor-pointer bg-blue-500 px-10 py-2 text-white rounded-lg"
         onClick={() => {
@@ -130,6 +175,8 @@ const Gsap = () => {
         <div id="box" className="w-20 h-20 bg-red-800 rounded-lg stagger-box" />
       </div> */}
 
+      {/* <div className="h-[70vh]"></div>
+
       <div className="mt-20 w-full h-screen" ref={scrollRef}>
         <div
           id="scroll-pink"
@@ -139,8 +186,24 @@ const Gsap = () => {
           id="scroll-orange"
           className="scroll-box w-20 h-20 rounded-lg bg-orange-500"
         ></div>
-      </div>
-    </>
+      </div> */}
+
+      <h1 className="opacity-0 translate-y-10 text-4xl font-bold" id="text">
+        GsapText
+      </h1>
+
+      <p className="mt-5 text-gray-500 para">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora unde
+        ipsum quos ab aliquam ea, mollitia dolorum qui, illum natus sequi, animi
+        numquam dolores similique vel nisi tempore delectus ut! Pariatur nulla
+        similique doloremque fugit, dolore eveniet provident sint odit!
+      </p>
+
+      <p className="mt-5 text-gray-500 para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
+        aperiam!
+      </p>
+    </div>
   );
 };
 
